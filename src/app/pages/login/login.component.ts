@@ -8,14 +8,11 @@ import {
 } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { HeaderComponent } from '../../components/header/header.component';
-
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterModule, HeaderComponent],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule],
   template: `
-    <app-header></app-header>
     
     <div class="min-h-screen bg-gradient-to-br from-primary-50 to-secondary-50 flex items-center justify-center py-12 px-4">
       <div class="max-w-md w-full">
@@ -109,13 +106,13 @@ import { HeaderComponent } from '../../components/header/header.component';
               <div class="flex justify-between">
                 <span class="text-neutral-600">User:</span>
                 <button (click)="fillDemo('user')" class="text-primary-600 hover:text-primary-700">
-                  user@waste.com / password
+                  user&#64;waste.com / password
                 </button>
               </div>
               <div class="flex justify-between">
                 <span class="text-neutral-600">Team:</span>
                 <button (click)="fillDemo('team')" class="text-primary-600 hover:text-primary-700">
-                  team@waste.com / password
+                  team&#64;waste.com / password
                 </button>
               </div>
             </div>

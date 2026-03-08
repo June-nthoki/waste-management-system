@@ -64,8 +64,8 @@ import { Feedback } from '../../models/feedback.model';
                     {{ formatDate(item.createdAt) }}
                   </span>
                   <span *ngIf="item.location?.address" class="flex items-center">
-                    <span class="material-icons text-sm mr-1">location_on</span>
-                    {{ item.location.address }}
+                  <span class="material-icons text-sm mr-1">location_on</span>
+                  {{ item.location?.address }}
                   </span>
                 </div>
               </div>

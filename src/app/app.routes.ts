@@ -5,19 +5,19 @@ import { RoleGuard } from './guards/role.guard';
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./pages/home/home.component.ts').then(m => m.HomeComponent)
+    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
   },
   {
     path: 'login',
-    loadComponent: () => import('./pages/login/login.component.ts').then(m => m.LoginComponent)
+    loadComponent: () => import('./pages/login/login.component').then(m => m.LoginComponent)
   },
   {
     path: 'signup',
-    loadComponent: () => import('./pages/signup/signup.component.ts').then(m => m.SignupComponent)
+    loadComponent: () => import('./pages/signup/signup.component').then(m => m.SignupComponent)
   },
   {
     path: 'dashboard',
-    loadComponent: () => import('./pages/dashboard/dashboard.component.ts').then(m => m.DashboardComponent),
+    loadComponent: () => import('./pages/dashboard/dashboard.component').then(m => m.DashboardComponent),
     canActivate: [AuthGuard]
   },
   {
@@ -25,38 +25,38 @@ export const routes: Routes = [
     children: [
       {
         path: 'submit',
-        loadComponent: () => import('./pages/feedback/submit-feedback.component.ts').then(m => m.SubmitFeedbackComponent),
+        loadComponent: () => import('./pages/feedback/submit-feedback.component').then(m => m.SubmitFeedbackComponent),
         canActivate: [AuthGuard, RoleGuard],
         data: { roles: ['user'] }
       },
       {
         path: 'status',
-        loadComponent: () => import('./pages/feedback/feedback-status.component.ts').then(m => m.FeedbackStatusComponent),
+        loadComponent: () => import('./pages/feedback/feedback-status.component').then(m => m.FeedbackStatusComponent),
         canActivate: [AuthGuard, RoleGuard],
         data: { roles: ['user'] }
       },
       {
         path: ':id',
-        loadComponent: () => import('./pages/feedback/feedback-detail.component.ts').then(m => m.FeedbackDetailComponent),
+        loadComponent: () => import('./pages/feedback/feedback-detail.component').then(m => m.FeedbackDetailComponent),
         canActivate: [AuthGuard]
       }
     ]
   },
   {
     path: 'tasks',
-    loadComponent: () => import('./pages/tasks/team-tasks.component.ts').then(m => m.TeamTasksComponent),
+    loadComponent: () => import('./pages/tasks/team-tasks.component').then(m => m.TeamTasksComponent),
     canActivate: [AuthGuard, RoleGuard],
     data: { roles: ['waste_team'] }
   },
   {
     path: 'admin',
-    loadComponent: () => import('./pages/admin/admin-panel.component.ts').then(m => m.AdminPanelComponent),
+    loadComponent: () => import('./pages/admin/admin-panel.component').then(m => m.AdminPanelComponent),
     canActivate: [AuthGuard, RoleGuard],
     data: { roles: ['admin'] }
   },
   {
     path: 'waste-tips',
-    loadComponent: () => import('./pages/waste-tips/waste-tips.component.ts').then(m => m.WasteTipsComponent)
+    loadComponent: () => import('./pages/waste-tips/waste-tips.component').then(m => m.WasteTipsComponent)
   },
   {
     path: '**',

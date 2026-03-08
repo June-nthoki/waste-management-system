@@ -9,6 +9,7 @@ import { NotificationService } from '../../services/notification.service';
 import { User } from '../../models/user.model';
 import { Feedback } from '../../models/feedback.model';
 import { Task } from '../../models/task.model';
+import 'src/global_styles.css';
 
 @Component({
   selector: 'app-dashboard',

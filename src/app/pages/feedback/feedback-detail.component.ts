@@ -51,7 +51,7 @@ import { Feedback, Comment } from '../../models/feedback.model';
               <div *ngIf="feedback.location?.address" class="mb-4 p-3 bg-neutral-50 rounded-lg">
                 <p class="text-sm text-neutral-700">
                   <span class="material-icons text-sm mr-1">location_on</span>
-                  {{ feedback.location.address }}
+                  {{ feedback.location?.address }}
                 </p>
               </div>
 

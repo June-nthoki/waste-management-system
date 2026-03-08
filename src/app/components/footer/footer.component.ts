@@ -69,7 +69,7 @@ import { RouterModule } from '@angular/router';
               </li>
               <li class="flex items-center space-x-2">
                 <span class="material-icons text-xs">email</span>
-                <span>support@wasteflow.com</span>
+                <span>support&#64;wasteflow.com</span>
               </li>
               <li class="flex items-center space-x-2">
                 <span class="material-icons text-xs">location_on</span>
